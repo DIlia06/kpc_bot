@@ -1,11 +1,6 @@
 from rest_framework import serializers
 
-from kpc_bot.models import UserAppeal
-
-
-class AboutUsSerializer(serializers.Serializer):
-    text = serializers.CharField()
-
+from appeals.models import UserAppeal
 
 class UserAppealsSerializer(serializers.Serializer):
     user_name = serializers.CharField()

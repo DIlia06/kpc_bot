@@ -1,24 +1,9 @@
-
+from django.shortcuts import render
 from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from kpc_bot.models import AboutUs, UserAppeal
-from kpc_bot.serializers import AboutUsSerializer, UserAppealsSerializer
-
-
-class AboutUsView(APIView):
-    def get(self, request: Request) -> Response:
-        aboutus_info = AboutUs.objects.first()
-        serializer = AboutUsSerializer(instance=aboutus_info)
-        return Response(serializer.data)
-
-
-class UserAppealListView(APIView):
-    def get(self, request: Request) -> Response:
-        appeals = UserAppeal.objects.all()
-        serializer = UserAppealsSerializer(appeals, many=True)
-        return Response(serializer.data)
+from appeals.serializers import UserAppealsSerializer
 
 
 class CreateUserAppeal(APIView):
@@ -32,9 +17,3 @@ class CreateUserAppeal(APIView):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data)
-
-
-
-
-
-

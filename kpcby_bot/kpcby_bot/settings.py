@@ -119,6 +119,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
-
-API_TOKEN = '833 8J8'
-API_BASE_URL = 'http://127.0.0.1:8000/api/v1/'
