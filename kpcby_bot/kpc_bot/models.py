@@ -13,6 +13,9 @@ class UserAppeal(models.Model):
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
 
+
+a = "asd"
+
 # class NameLinkMixin(models.Model):
 #     name = models.CharField(max_length=255, null=True)
 #     link = models.CharField(max_length=255)
