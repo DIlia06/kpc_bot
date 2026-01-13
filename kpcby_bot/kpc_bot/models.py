@@ -13,7 +13,7 @@ class UserAppeal(models.Model):
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
 
-
+# fd
 a = "asd"
 
 # class NameLinkMixin(models.Model):
