@@ -3,7 +3,7 @@ from django.db import models
 from core.models import DateTimeMixin
 
 
-class NameLinkMixin(models.Model):
+class Catalog(models.Model):
     name = models.CharField(max_length=255, null=True)
     link = models.CharField(max_length=255)
 
@@ -11,25 +11,25 @@ class NameLinkMixin(models.Model):
         abstract = True
 
 
-class Printers(NameLinkMixin, DateTimeMixin):
+class Printers(Catalog, DateTimeMixin):
     pass
 
 
-class Mfu(NameLinkMixin, DateTimeMixin):
+class Mfu(Catalog, DateTimeMixin):
     pass
 
 
-class OptionalEquipment(NameLinkMixin, DateTimeMixin):
+class OptionalEquipment(Catalog, DateTimeMixin):
     pass
 
 
-class Consumables(NameLinkMixin, DateTimeMixin):
+class Consumables(Catalog, DateTimeMixin):
     pass
 
 
-class Spares(NameLinkMixin, DateTimeMixin):
+class Spares(Catalog, DateTimeMixin):
     pass
 
 
-class RelatedProducts(NameLinkMixin, DateTimeMixin):
+class RelatedProducts(Catalog, DateTimeMixin):
     pass

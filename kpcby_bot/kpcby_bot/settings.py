@@ -40,7 +40,10 @@ INSTALLED_APPS = [
 
     'rest_framework',
 
-    'kpc_bot',
+    'appeals',
+    'catalog',
+    'core',
+    'users',
 ]
 
 MIDDLEWARE = [
